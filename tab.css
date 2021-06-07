@@ -13,6 +13,7 @@
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  border-radius: 5px 5px 0px 0px ;
 }
 
 /* Change background color of buttons on hover */
@@ -34,5 +35,6 @@
   border: 1px solid #BC5A50;
   border-right: none;
   border-left: none;
+  border-bottom: none;
   background-color: #FFFFFF;
 } 

@@ -36,10 +36,16 @@ actually tweeted anything.
     for the general public. If you're looking for information on public observing, you can visit
     the Peyton Observatory website <a href="https://www.astro.princeton.edu/observatory/publicobserving.php">here</a>.
   </p>
+  <p style="border-top:1px solid #ffffff; margin-top:300px;" align="right">Last Updated: <span id="demo"></span></p>
+<script>
+  document.getElementById("demo").innerHTML = document.lastModified;
+</script>
 </div>
 
 <div id="About" class="tabcontent">
   <h3>About Me</h3>
+  <img src="./resources/profile_kadofong.jpg" alt="Erin Kado-Fong picture" 
+       style="float:right; margin-left:15px; width:200px;border-radius:5px;position:relative; right:12px; bottom:50px" align="right" >
   <p>I grew up in Davis, CA, a small-ish town in the valley of California. Unlike most small towns in the middle
     of farmland, there is a decent chance that you (likely an academic) know of my hometown 
     as the location of UC Davis (go Aggies!). </p>
@@ -123,10 +129,4 @@ function openCity(evt, cityName) {
 document.getElementById("DefaultOpen").click();
 </script>
 
-
-
-<p>Last Updated: <span id="demo"></span></p>
-<script>
-  document.getElementById("demo").innerHTML = document.lastModified;
-</script>
 
