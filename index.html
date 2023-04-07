@@ -17,9 +17,9 @@ p{
 
 <body>
  <!-- Tab links -->
-<div class="tab">
+<div class="tab" style="margin-left:30px">
   <button class="tablinks" onclick="openCity(event, 'Home')" id="DefaultOpen">Home</button>
-  <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>  
+  <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
   <button class="tablinks" onclick="openCity(event, 'Data and Catalogs')">Data and Catalogs</button>
   <button class="tablinks" onclick="openCity(event, 'About')">About Me</button>
   <!-- <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button> -->
@@ -29,23 +29,39 @@ p{
 <link rel="stylesheet" href="tab.css">
 <div id="Home" class="tabcontent">
   <h3>Home</h3>
-  <img src="./resources/headshot_expanded.jpg" alt="Erin Kado-Fong picture" 
-       style="float:right; margin-left:15px; margin-right:20px; width:300px;border-radius:5px;position:relative; right:12px; bottom:50px" align="right" >  
   <br>
-  <h5>Welcome!</h5>
-  <p>I am a YCAA prize fellow at the Yale Center for Astronomy and Astrophysics. 
+  <!--<p class="centertext" style="color: rgb(34, 218, 238); font-size:20px">Welcome!</p>-->
+  <p class="centertext">
     I'm an observer
-    broadly interested in questions of galaxy structure and stellar assembly, especially in low-mass systems. 
-    I got my PhD from Princeton in 2022, and in 2025 I will become a Kavli fellow
-    at the Kavli Institute for Particle Astrophysics and Cosmology at Stanford. 
-    <a href="./resources/kadofong_CV.pdf">My full CV can be found here</a>.
+    broadly interested in using widefield surveys to constrain the physical processes that underpin 
+    galaxy evolution. 
   </p>
-  <br>
-  <h5>Contact</h5>
-  <p>You can find me at Steinbach Hall in Office 216, or virtually at <u>erin.kado-fong at yale dot edu</u>.<br>
-  I can also be found on <a href="https://github.com/ekadofong">Github</a> and on twitter as 
-  <a href="https://twitter.com/erin_kadofong">@erin_kadofong</a>.
-  </p>
+  <div class="container" style="margin-top:25px">
+    <div>
+      <p class="frcmargin"  style="margin-top:100px">
+        Much of my work is in the low-mass galaxy regime, where I think about how 
+        dwarf galaxies can inform our understanding of both dark matter and the baryon cycle. 
+        I am currently a YCAA prize fellow at the Yale Center for Astronomy and Astrophysics;
+        I got my PhD from Princeton in 2022, and in 2025 I will become a Kavli fellow
+        at the Kavli Institute for Particle Astrophysics and Cosmology at Stanford.
+        <br>
+        <a href="./resources/kadofong_CV.pdf">My full CV can be found here</a>.
+      </p>
+      <br>
+      <h4 style="margin-left:100px;">
+        <b>Contact</b>
+      </h4>  
+      <p class="frcmargin">
+        You can find me at Steinbach Hall in Office 216, or virtually at <u>erin.kado-fong at yale dot edu</u>.<br>
+        I can also be found on <a href="https://github.com/ekadofong">Github</a> and on twitter as
+        <a href="https://twitter.com/erin_kadofong">@erin_kadofong</a>.
+      </p>
+  </div>
+  <div>
+    <img src="./resources/headshot_expanded.jpg" alt="Erin Kado-Fong picture"
+        style="float:right; margin-top:50px; margin-left:15px; margin-right:100px; width:500px;border-radius:5px; right:12px;" align="right" >  
+  </div>
+  </div>
   <p style="border-top:1px solid #ffffff; margin-top:300px;" align="right">Last Updated: <span id="demo"></span></p>
 <script>
   document.getElementById("demo").innerHTML = document.lastModified;
@@ -54,14 +70,15 @@ p{
 
 <div id="About" class="tabcontent">
   <h3>About Me</h3>
-  <p>I grew up in Davis, CA, a small-ish town in the valley of California. Unlike most small towns in the middle
-    of farmland, there is a decent chance that you (likely an academic) know of my hometown 
-    as the location of UC Davis (go Aggies!). </p>
-  <p>
+  <p class="frcmargin">
+    I grew up in Davis, CA, a small-ish town in the valley of California. Unlike most small towns in the middle
+    of farmland, there is a decent chance that you (likely an academic) know of my hometown
+    as the location of UC Davis. </p>
+  <p class="frcmargin">
     I decamped to the East Coast in 2013 to get my bachelor's at Tufts University, where I was advised by
     <a href="http://cosmos.phy.tufts.edu/~danilo/Home.html">Danilo Marchesini</a>. In 2017, I moved down
     to Princeton for graduate school; my advisor was <a href="https://crispygreene.wix.com/jenny">Jenny Greene</a>.
-    In 2022 we moved north to Connecticutt when I became a YCAA fellow at Yale -- in 2025, I'll 
+    In 2022 we moved north to Connecticut when I became a YCAA fellow at Yale -- in 2025, I'll
     head back to California as a Kavli fellow at KIPAC.
 </p>
 </div>
@@ -70,22 +87,23 @@ p{
   <h3>Contact</h3>
   <p>
   You can find me at Steinbach Hall in Office 216, or virtually at <u>erin.kado-fong at yale dot edu</u>.<br>
-  I can also be found on <a href="https://github.com/ekadofong">Github</a> and on twitter as 
+  I can also be found on <a href="https://github.com/ekadofong">Github</a> and on twitter as
   <a href="https://twitter.com/erin_kadofong">@erin_kadofong</a>.
 </p>
 </div>
 
 <div id="Data and Catalogs" class="tabcontent">
   <h3>Data and Catalogs</h3>
-  <p>Here are some catalogs and data releases for projects that I've worked on. If you're interested in 
-catalog data associated with a project of mine that isn't listed below, feel free to shoot me an email.</p>
+  <p class="centertext" style="font-size:20px">
+    Here are some catalogs and data releases for projects that I've worked on. If you're interested in
+    catalog data associated with a project of mine that isn't listed below, feel free to shoot me an email.
+  </p>
 
   <br></br>
   <h5>The Merian Survey<img src="./resources/logo_nobbox.png" alt="Merian logo" style="float:right;width:48px"></h5>
   <p>I am a Co-I on the Merian Survey, a DECam survey of 100,000 starforming dwarfs at z~0.1. Merian will provide the first mass-complete sample of starforming dwarfs down to stellar masses of 10<sup>8</sup> solar masses over more than 800 sq.
 degrees on the sky with broadband imaging from the Hyper Suprime-Cam Subaru Strategic Program (HSC-SSP).</p>
   <p>Survey website: <a href="https://merian.sites.ucsc.edu">here</a></p>
-
 
   <br></br>
   <h5>Dwarf-Dwarf Mergers in HSC-SSP</h5>
@@ -101,7 +119,7 @@ degrees on the sky with broadband imaging from the Hyper Suprime-Cam Subaru Stra
 
   <br></br>
   <h5>Multi-wavelength catalogs of the Hubble Frontier Fields</h5>
-  <p>UV-IR catalogs of HFF galaxies with photometry, photometric redshifts, best-fit stellar population properties, 
+  <p>UV-IR catalogs of HFF galaxies with photometry, photometric redshifts, best-fit stellar population properties,
 and lensing magnification factors</p>
   <p>NASA ADS link for the associated paper: <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..235...14S/abstract">Shipley et al. 2018</a></p>
   <p>Associated Catalog: available at <a href="http://cosmos.phy.tufts.edu/~danilo/HFF/Download.html">HFFDeepSpace</a></p>
@@ -116,9 +134,65 @@ and lensing magnification factors</p>
 
 <div id="Research" class="tabcontent">
   <h3>Research</h3>
-  <p>Here is <a href="./resources/kadofong_CV.pdf">my CV</a>, last updated 2023/03.</p>
-  <p>While I work on a dedicated page for ongoing research, here's <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22kado-fong%2C%20e%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">my ADS record</a>.</p>
+  <p>Here is <a href="./resources/kadofong_CV.pdf">my CV</a>, last updated 2023/03. While I work on a dedicated page for ongoing research, here's <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22kado-fong%2C%20e%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">my ADS record</a>.</p>
   <p>If you prefer ORCIDs, mine is 0000-0002-0332-177X.</p>
+  <body>
+    <div class="container" style="margin-left:100px; margin-right:100px; margin-top:100px">
+      <div class="video">
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tK9QYa2LKM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <script>
+          // 2. This code loads the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+          // 3. This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+              height: '390',
+              width: '640',
+              videoId: 'M7lc1UVf-VE',
+              playerVars: {
+                'playsinline': 1
+              },
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          }
+
+          // 4. The API will call this function when the video player is ready.
+          function onPlayerReady(event) {
+            event.target.playVideo();
+          }
+
+          // 5. The API calls this function when the player's state changes.
+          //    The function indicates that when playing a video (state=1),
+          //    the player should play for six seconds and then stop.
+          var done = false;
+          function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+              setTimeout(stopVideo, 6000);
+              done = true;
+            }
+          }
+          function stopVideo() {
+            player.stopVideo();
+          }
+        </script>
+      </div>
+      <div>
+        <p> You can find a video on my thesis work here; this is a research highlight done for the <a href="https://gradschool.princeton.edu/financial-support/fellowships/princeton-fellowships/honorific-fellowship-porter-ogden-jacobus">Porter Ogden Jacobus Honorific Fellowship</a> that supported my final year of graduate school.
+      </div>
+    </div>
+  </body>
 </div>
 
 <!-- tab function -->
