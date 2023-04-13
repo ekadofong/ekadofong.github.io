@@ -65,3 +65,41 @@ padding-left: 20px;
     text-align: center;
     width: 60%;
 }
+
+.headshot {
+    float:right; 
+    margin-top:50px; 
+    margin-left:15px; 
+    margin-right:100px; 
+    width:500px;
+    border-radius:5px; 
+    right:12px;
+}
+
+.headshotmobile {
+    display:None
+}
+
+@media (max-width:1000px) {
+    .centertext {
+        font-size: 30px;
+        font-family:Georgia;
+        margin: 0 auto; /* center element horizontally */
+        text-align: center;
+        width: 95%;
+    }
+    .frcmargin {
+        margin-left:10px;
+        margin-right:10px;
+    }    
+    .headshot {
+        display:None;
+    }
+    .headshotmobile {
+        display:block;
+        float:center;
+        width:40%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
