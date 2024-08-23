@@ -1,108 +1,416 @@
-﻿/* W3.CSS 4.13 June 2019 by Jan Egil and Borge Refsnes */
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-/* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
-html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
-audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
-audio:not([controls]){display:none;height:0}[hidden],template{display:none}
-a{background-color:transparent}a:active,a:hover{outline-width:0}
-abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
-b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
-small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
-code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
-button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
-button,input{overflow:visible}button,select{text-transform:none}
-button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
-button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
-button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
-fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
-legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
-[type=checkbox],[type=radio]{padding:0}
-[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
-[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
-[type=search]::-webkit-search-decoration{-webkit-appearance:none}
-::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
-/* End extract */
-html,body{font-family:Georgia;font-size:15px;letter-spacing:1.1px;line-height:1.2}html{overflow-x:hidden}
-h1{font-size:36px}
-h2{font-size:50px}
-h3{font-size:54px; color:#ececec;}
-h4{font-size:20px}
-h5{font-size:18px}
-h6{font-size:36px; color:#a3a3a3; text-align: center;}
-h1,h2,h3,h4,h5,h6{font:Georgia;font-weight:10;margin:10px;margin-left:15px;letter-spacing:1px;}
-hr{border:0;border-top:1px solid #eee;margin:20px 0}
-h2{margin-left:30px;letter-spacing:5px;}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #333;    
+    overflow: auto; /* Allow the body to scroll */
+}
+
+header {    
+    background-image: url('resources/decor/banner.jpg');
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center -10px; /* Center the background image */
+    padding: 3rem 0;
+    text-align: top; 
+    padding-left: 2rem; /* Add padding to the left for better alignment */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; 
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Increase font size */
+    align-items: center;
+    color: #fff;
+    text-shadow: 0px 0px 2px #0A1B2A
+}
+
+footer {    
+    background-image: url('resources/decor/footer.jpg');
+    background-size:cover;
+    background-position: center top;
+    position:fixed;
+    height: 40px;
+    color: #788c93; /* Text color */
+    text-align: right; /* Center-align the text */
+    padding: 0rem 0; /* Padding to add space around the text */
+    font-size: 0.8rem; /* Smaller font size */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #4B5D64
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #4B5D64;
+    text-align: center;
+}
+
+.sidebar {
+    color: #fff;
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    height: 20px;
+    top: 100px; /* Adjust based on header height */
+    z-index: 1; /* Lower z-index to be below the header */
+    display: flex;
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.sidebar ul li {
+    position: relative; /* Add relative positioning for the hover effect */
+}
+
+.sidebar ul li a {
+    color: #E1E8F0;
+    text-decoration: none;
+    padding: 0.5rem 1rem; /* Adjust padding for better click area */
+}
+
+.sidebar ul li a:hover {
+    color: #c87d55; /* Highlight color on hover */
+}
+
+.sidebar ul li a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -4px; /* Place the line underneath the text */
+    left: 0;
+    right: 0;
+    height: 4px; /* Thickness of the line */
+    background: #c87d55; /* Color of the line */
+    z-index: -1; /* Place behind the text */
+}
 
 .container {
-    display: flex;
-    align-items: left;
-    justify-content: left    
-  }
-
-img {
-max-width: 100%
+    position: relative; /* Changed from absolute to relative */
+    width: 100%;
+    height: auto; /* Changed to auto to adjust based on content */
+    margin-top: 100px; /* Adjust this value based on the combined height of your header and sidebar */
+    padding: 2rem 0rem;
+    min-height: 1000px;
+    overflow: auto; /* Ensure that the container itself can scroll if needed */
 }
 
-.video {
-    flex-basis: 40%;
-    margin-left:auto;
-    margin-right:auto
+
+main {
+    padding: 2rem;
 }
 
-.text {
-font-size: 20px;
-padding-left: 20px;
+section {
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    display: none; /* Hide all sections by default */
 }
 
-.frcmargin {
-    margin-left:100px;
-    margin-right:100px;
+section.active {
+    display: block; /* Show active section */
 }
 
-.centertext {
-    font-size: 30px;
-    font-family:Georgia;
-    margin: 0 auto; /* center element horizontally */
+section h2 {
+    margin-top: 220px;
+}
+
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.thumbnail {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* This creates a square aspect ratio */
+    overflow: hidden;
+}
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.thumbnail .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
     text-align: center;
-    width: 60%;
+    padding: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1.5rem;
 }
 
-.headshot {
-    float:right; 
-    margin-top:10px; 
-    margin-left:15px; 
-    margin-right:100px; 
-    width:700px;
-    border-radius:5px; 
-    right:12px;
+.thumbnail:hover .overlay {
+    opacity: 1;
 }
 
-.headshotmobile {
-    display:None
+/* extra media player CSS */
+.media-player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
 }
 
-@media (max-width:1000px) {
-    .centertext {
-        font-size: 30px;
-        font-family:Georgia;
-        margin: 0 auto; /* center element horizontally */
-        text-align: center;
-        width: 95%;        
-    }
-    .frcmargin {
-        margin-left:10px;
-        margin-right:10px;
-    }    
-    .headshot {
-        display:None;
-    }
-    .headshotmobile {
-        display:block;
-        float:center;
-        width:40%;
-        margin-left:auto;
-        margin-right:auto;
-    }
+.media-player-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.media-player-content {
+    position: relative;
+    z-index: 1001;
+    width: 75%; /* Set the width to 75% of the screen */
+    height: 75%; /* Set the height to 75% of the screen */
+    max-width: 75%; /* Ensure the max width doesn't exceed 75% */
+    max-height: 75%; /* Ensure the max height doesn't exceed 75% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.media-player-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure the image fits within the container without distortion */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* IMAGES */
+.text {
+    flex: 1;
+    min-width: 200px;
+}
+
+.image {
+    flex: 0 0 150px; /* Adjust the size of the image container */
+}
+
+.image img {
+    width: 20%;
+    height: auto;
+    display: block;
+}
+
+/* PDF */
+.pdf-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+}
+.pdf-container embed {
+    display: block;
+    margin: auto;
+    width: 80%; /* Adjust the width as needed */
+    height: 100vh; /* Adjust the height as needed */
+}
+
+
+/* Papers Page Styles */
+.papers-container {
+    display: flex;
+    flex-direction: column;    
+    gap: 2rem;
+    height: 100%;
+}
+
+.paper-link {
+    display: block; /* Make the whole card clickable */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */      
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+
+.paper-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 0.3s ease, transform 0.3s ease;    
+}
+
+/* Add a class for hiding elements */
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+    height: 0;
+    margin: 0;
+    transform: translateX(20px);    
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+
+.paper-text:hover {
+    background-color: #c87d55;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+
+.paper-image img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.paper-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;    
+    padding: 1rem;
+    margin-left: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.paper-text.right-align {
+    text-align: right; /* Change to the desired alignment */
+}
+
+.paper-text h3 {
+    margin-bottom: 0.15rem; /* Reduce space below title */
+}
+
+.paper-text authors {
+    margin: 0.25rem 0rem; /* Reduce vertical margins for paragraphs */
+}
+
+.paper-text tagline{
+    margin-bottom: 0.15rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* PAPER TABS */
+.sort-tabs {
+    margin-bottom: 1rem;
+}
+
+.sort-tabs button {
+    background-color: #4B5D64;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.sort-tabs button:hover {
+    background-color: #c87d55;
+}
+
+
+.image-container {
+    text-align: center; /* Center-aligns the image within the container */
+}
+
+.image-container img {
+    display: inline-block; /* Ensure the image behaves as an inline element */
+    max-width: 100%; /* Optional: makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 2.5rem; /* Space between icons */
+    padding: 1rem 0; /* Padding around the row */
+}
+
+.icon-row a {
+    display: inline-block;
+    width: 5%; /* Adjust the size of the icons */
+    height: auto;
+}
+
+.icon-row img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensure icons fit within the container */
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+    text-decoration: none;    
+}
+
+.icon-row a:hover img {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.icon-caption {
+    display: block;
+    margin-top: 0rem; /* Space between icon and caption */
+    font-size: 0.9rem; /* Adjust font size as needed */
+    color: #c87d55; /* Default text color */
+    text-decoration: none;
+}
+
+.social-icon{
+    color:inherit;
+    text-decoration: none;
+    text-align: center;
 }

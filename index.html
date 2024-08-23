@@ -1,261 +1,536 @@
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="styles.css">
-
-<style>
-body{
-  background-color: #ffffff;
-}
-p{
-  margin-left: 40px;
-  margin-right:40px;
-}
-</style>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta name="google-site-verification" content="z6qqWvEM5zF4m4rPVnEIA9qeBWSx7bTB_DPx8Pv-Tng" />
-  <h2>ERIN KADO-FONG</h2>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erin Kado-Fong</title>    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">  <!--For font -->
+    <script src="scripts.js" defer></script>
 </head>
+<body>  
+    <header>
+        <h1><a href="#gallery" onclick="openTab('gallery')" style="text-decoration: none; color: inherit;">Erin Kado-Fong</a></h1>  
+    </header>       
+    <nav class="sidebar">
+        <ul>
+            <!--<li><a href="#gallery" onclick="openTab('gallery')">Gallery</a></li>-->
+            <li><a href="#education" onclick="openTab('education')">CV</a></li>            
+            <li><a href="#research" onclick="openTab('research')">Research</a></li>
+            <li><a href="#papers" onclick="openTab('papers')">Publications</a></li>
+            <li><a href="#about" onclick="openTab('about')">About Me</a></li>              
+        </ul>
+    </nav>
 
-<body>
- <!-- Tab links -->
-<div class="tab" style="margin-left:30px">
-  <button class="tablinks" onclick="openCity(event, 'Home')" id="DefaultOpen">Home</button>
-  <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
-  <button class="tablinks" onclick="openCity(event, 'Data and Catalogs')">Data and Catalogs</button>
-  <button class="tablinks" onclick="openCity(event, 'About')">About Me</button>
-  <!-- <button class="tablinks" onclick="openCity(event, 'Contact')">Contact</button> -->
-</div>
+    <div class="container">
+        <main>
+            <section id="about" class="tab-content">
+                <h2>
+                    About Me
+                </h2>
+                <div class="content">
+                    <h1>
+                        Who am I?
+                    </h1>                    
+                    <div class="text">
+                        <p>
+                            I grew up in Davis, CA, a small-ish town in the valley of California. Unlike most small towns in the middle
+                            of farmland, there is a decent chance that you (likely an academic) know of my hometown
+                            as the location of UC Davis. 
+                            I moved to the East Coast in 2013 to get my bachelor's at Tufts University, where I was advised by
+                            <a href="https://cosmos.phy.tufts.edu/~danilo/Home.html">Danilo Marchesini</a>. In 2017, I moved down
+                            to Princeton for graduate school; my advisor was <a href="https://crispygreene.wix.com/jenny">Jenny Greene</a>.
+                            In 2022 I moved north to Connecticut when I became a YCAA Prize Fellow at Yale -- in 2025, I'll
+                            head back to California as a Kavli fellow at KIPAC.
+                        </p>  
+                    </div>
+                    <h1>
+                        Where am I?
+                    </h1>                    
+                    <div class="icon-row"  style="margin-top:-30px">
+                        <a href="mailto:erin.kado-fong@yale.edu" target="_blank" class="social-icon">
+                            <img src="resources/decor/email_icon.svg" alt="Email Icon" title="Send me an email">   
+                            <span class="icon-caption">Email</span>                         
+                        </a>
+                        <a href="https://physics.yale.edu/people/erin-kado-fong" target="_blank" class="social-icon">
+                            <img src="resources/decor/office_icon.svg" alt="Office Icon" title="Find me in the office">
+                            <span class="icon-caption">Office</span>
+                        </a>
+                        <a href="https://bsky.app/profile/kadofong.bsky.social" target="_blank" class="social-icon">
+                            <img src="resources/decor/bluesky_icon.svg" alt="Bluesky Icon" title="Follow me on Bluesky">
+                            <span class="icon-caption">Bluesky</span>
+                        </a>                     
+                        <a href="https://github.com/ekadofong/" target="_blank" class="social-icon">
+                            <img src="resources/decor/github_icon.svg" alt="Github Icon" title="Follow me on Github">
+                            <span class="icon-caption">Github</span>
+                        </a>                             
+                        <!-- Add more icons as needed -->
+                    </div>
+                    <h1>
+                        What do I do for fun (besides physics)?
+                    </h1>
+                    <div class="gallery-grid">
+                        <!-- Repeat this block for each thumbnail -->
+                        <div class="thumbnail" data-type="image" data-src="resources/images/climbing.jpg">
+                            <img src="resources/images/climbing.jpg" alt="Image 1">
+                            <div class="overlay">Sport climbing in MA</div>
+                        </div>
+                        <div class="thumbnail" data-type="image" data-src="resources/images/mormonhollow.jpg">
+                            <img src="resources/images/mormonhollow.jpg" alt="Image 1">
+                            <div class="overlay">More sport climbing in MA</div>
+                        </div>       
+                        <div class="thumbnail" data-type="image" data-src="resources/images/airline.jpg">
+                            <img src="resources/images/airline.jpg" alt="Image 1">
+                            <div class="overlay">Biking in CT</div>
+                        </div>   
+                        <div class="thumbnail" data-type="image" data-src="resources/images/apartmentboulders.jpg">
+                            <img src="resources/images/apartmentboulders.jpg" alt="Image 1">
+                            <div class="overlay">Bouldering in TN</div>
+                        </div>                                                                   
+                    </div>                                                         
+                </div>
+            </section>
 
-<!-- Tab content -->
-<link rel="stylesheet" href="tab.css">
-<div id="Home" class="tabcontent">
-  <h3>Home</h3>
-  <br>
-  <!--<p class="centertext" style="color: rgb(34, 218, 238); font-size:20px">Welcome!</p>-->
-  <p class="centertext">
-    <b>
-    I am an observer
-    broadly interested in using dwarf galaxies to constrain the physical processes that underpin 
-    galaxy evolution.
-  </b> 
-  </p>
-  <div class="container" style="margin-top:25px">
-    <div>
-      <p class="frcmargin"  style="margin-top:10px;margin-right:150px">
-        <b style="font-size:15pt">Galaxies are versatile if immutable laboratories</b>; they are simultaneously tracers of larger scale
-        cosmological processes and the laboratories in which smaller scale astrophysics proceeds.
-        Given that we are not able to create either universes nor stars in the lab, my work focuses on 
-        how to best use the cosmic laboratories at our disposal to understand the physical processes that shape them.
-      </p>
-      <p class="frcmargin"  style="margin-top:10px;margin-right:150px">
-        My main interest is in the low-mass galaxy regime, where I think about how 
-        dwarf galaxies can inform our understanding of physics at both larger and smaller scales. 
-        I have a particular interest in the relationship between the star formation cycle and 
-        the dwarf population as a way to understand both the physics of star formation regulation and 
-        the creation of the galaxy population.
-      </p>
-      <p class="frcmargin"  style="margin-top:10px;margin-right:150px">
-        I am currently a YCAA prize fellow at the Yale Center for Astronomy and Astrophysics;
-        I got my PhD from Princeton in 2022, and in 2025 I will become a Kavli fellow
-        at the Kavli Institute for Particle Astrophysics and Cosmology at Stanford.
-        <br>
-        <a href="./resources/kadofong_CV.pdf">My full CV can be found here</a>.
-      </p>
-      <img src="./resources/headshot_expanded.jpg" alt="Erin Kado-Fong picture" class="headshotmobile" align="center" >  
-      <h4 style="margin-left:100px;">
-        <b>Contact</b>
-      </h4>  
-      <p class="frcmargin">
-        You can find me at Kline Tower in Office 433, or virtually at <u>erin.kado-fong at yale dot edu</u>.<br>
-        I can also be found on <a href="https://github.com/ekadofong">Github</a> and on twitter as
-        <a href="https://twitter.com/erin_kadofong">@erin_kadofong</a>.
-      </p>
-  </div>
-  <div>
-    <img src="./resources/headshot_expanded.jpg" alt="Erin Kado-Fong picture" class="headshot" >  
-  </div>
-  </div>
-  <p style="border-top:1px solid #ffffff; margin-top:300px;" align="right">Last Updated: <span id="demo"></span></p>
-<script>
-  document.getElementById("demo").innerHTML = document.lastModified;
-</script>
-</div>
+            <section id="research" class="tab-content">
+                <h2>
+                    Research
+                </h2>  
+                <p style="text-align:center">   
+                    <b style="font-size:20pt; color:#c87d55">
+                        I study the interplay between baryonic processes and low-mass galaxy assembly.
+                    </b>
+                </p>
+                <p>
+                    My work leverages statistical observations of low-mass galaxy samples to learn about the 
+                    astrophysical processes that govern dwarf galaxy assembly via the application of purpose-built, physics-based 
+                    inference frameworks on large-volume dwarf galaxy datasets. You can find short summaries of the works I've 
+                    been involved in under the <a href="#papers" onclick="openTab('papers')">Papers</a> tab of this website.
+                </p> 
+                <p>
+                    I am a member of the <a href="https://merian.sites.ucsc.edu/">Merian Medium-band Survey</a> of 100,000 dwarfs, 
+                    the <a href="https://sagasurvey.org/">Satellites Around Galactic Analog</a> Survey of the satellite systems of 101 Milky Way analogs, 
+                    and the <a href="https://pfs.ipmu.jp/">Prime Focus Spectrograph Subaru Strategic Program</a>. 
+                </p>
+                <div class="image-container">
+                    <img src="resources/decor/keynote.png" alt="Description of image" width="50%">
+                </div>                          
+            </section>
 
-<div id="About" class="tabcontent">
-  <h3>About Me</h3>
-  <p class="frcmargin">
-    I grew up in Davis, CA, a small-ish town in the valley of California. Unlike most small towns in the middle
-    of farmland, there is a decent chance that you (likely an academic) know of my hometown
-    as the location of UC Davis. </p>
-  <p class="frcmargin">
-    I decamped to the East Coast in 2013 to get my bachelor's at Tufts University, where I was advised by
-    <a href="https://cosmos.phy.tufts.edu/~danilo/Home.html">Danilo Marchesini</a>. In 2017, I moved down
-    to Princeton for graduate school; my advisor was <a href="https://crispygreene.wix.com/jenny">Jenny Greene</a>.
-    In 2022 we moved north to Connecticut when I became a YCAA fellow at Yale -- in 2025, I'll
-    head back to California as a Kavli fellow at KIPAC.
-</p>
-</div>
+            <section id="education" class="tab-content">
+                <h2>CV</h2>       
+                <div class="pdf-container">         
+                    <embed src="./resources/kadofong_CV.pdf" width="90%" height="600px" type="application/pdf" margin-left="10rem">
+                </div>
+            </section>
 
-<div id="Contact" class="tabcontent">
-  <h3>Contact</h3>
-  <p>
-  You can find me at Steinbach Hall in Office 216, or virtually at <u>erin.kado-fong at yale dot edu</u>.<br>
-  I can also be found on <a href="https://github.com/ekadofong">Github</a> and on twitter as
-  <a href="https://twitter.com/erin_kadofong">@erin_kadofong</a>.
-</p>
-</div>
-
-<div id="Data and Catalogs" class="tabcontent">
-  <h3>Data and Catalogs</h3>
-  <p style="font-size:15px; margin-left:20px">
-    If you're interested in catalog data associated with a project of mine that isn't listed below, feel free to shoot me an email.
-  </p>
-
-
-  <br></br>
-  <h6>The Merian Survey</h6>    
-  <div style="display: flex; align-items: center;">           
-    <img  src="./resources/logo_nobbox.png" alt="Merian logo" style="float:left;width:150px"> 
-    <div>                    
-      <p>I am a Co-I on the Merian Survey, a DECam survey of 100,000 star-forming dwarfs at 0.05&lt;z&lt;0.1. Merian will provide the first mass-complete sample of star-forming dwarfs down to stellar masses of 10<sup>8</sup> solar masses over more than 800 sq.
-      degrees on the sky with broadband imaging from the Hyper Suprime-Cam Subaru Strategic Program (HSC-SSP).</p>
-      <p>Survey website: <a href="https://merian.sites.ucsc.edu">here</a></p>      
-    </div>
-  </div>  
-
-  <br></br>
-  <h6>The SAGA Survey</h6>    
-  <div style="display: flex; align-items: center;">           
-    <img src="./resources/saga_headcard.jpg" alt="SAGA Paper III figure" style="width: 150px;"> 
-    <div>                    
-      <p>I work with the Satellites Around Galactic Analogs (SAGA) Survey team to learn about star formation regulation in low-mass galaxies. The SAGA survey is a spectroscopic survey of satellites around 101 nearby MW-like hosts. My interest within the survey actually relates mostly to the spectroscopic targets that were found to <em>not</em> be related to the SAGA hosts. These SAGAbg (SAGA background) galaxies tend to be low-mass and star-forming; the depth and selection of the SAGA survey sheds new light on the low-mass galaxy population even beyond their main sample.</p>
-      <p>The SAGA survey recently had its third data release! Check out the eposters for SAGA Papers <a href="https://sagasurvey.org/paper3/">III</a>, <a href="https://sagasurvey.org/paper4/">IV</a>, and <a href="https://sagasurvey.org/paper5/">V</a> here!</p>
-      <p>Survey website: <a href="https://sagasurvey.org/">here</a></p>  
-      <p>NASA ADS link for Paper I of the SAGAbg series: <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240116469K/abstract">Kado-Fong et al. 2024</a></p>
-    </div>
-  </div>
-
-  <br></br>
-  <h6>Dwarf-Dwarf Mergers in HSC-SSP</h6>    
-  <div style="display: flex; align-items: center;">           
-    <img src="./resources/ekf2019_headcard.jpg" alt="Kado-Fong et al. 2019 figure" style="width: 150px;"> 
-    <div>                    
-      <p>A catalog of major mergers between dwarf galaxies at z&lt;0.15 in the Hyper Suprime-Cam Subaru Strategic Program.</p>
-      <p>NASA ADS link for the associated paper: <a href="https://ui.adsabs.harvard.edu/abs/2020AJ....159..103K/abstract">Kado-Fong et al. 2020</a></p>
-      <p>Associated Catalog: the VizieR Catalog Link can be <a href="https://ui.adsabs.harvard.edu/abs/2020yCat..51590103K/abstract">found here</a></p>
-    </div>
-  </div>  
-  
-  <br></br>
-  <h6>Tidal Features in HSC-SSP</h6>    
-  <div style="display: flex; align-items: center;">           
-    <img src="./resources/ekf2018_headcard.jpg" alt="Kado-Fong et al. 2018 figure" style="width: 150px;"> 
-    <div>                    
-      <p>A catalog of galaxies that host tidal features at z&lt;0.45 in the Hyper Suprime-Cam Subaru Strategic Program, along with the morphological classification (shell/stream) of their tidal features.</p>
-      <p>NASA ADS link for the associated paper: <a href="https://ui.adsabs.harvard.edu/abs/2018ApJ...866..103K/abstract">Kado-Fong et al. 2018</a></p>
-      <p>Associated Catalog: the catalog can be found as CSV <a href="./resources/hsc_tfmorphologies-20190715.csv">here</a></p>
-    </div>
-  </div>  
-
-  <br></br>
-  <h5></h5>
-
-
-  <br></br>
-  <h5>Multi-wavelength catalogs of the Hubble Frontier Fields</h5>
-  <p>UV-IR catalogs of HFF galaxies with photometry, photometric redshifts, best-fit stellar population properties,
-and lensing magnification factors</p>
-  <p>NASA ADS link for the associated paper: <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..235...14S/abstract">Shipley et al. 2018</a></p>
-  <p>Associated Catalog: available at <a href="http://cosmos.phy.tufts.edu/~danilo/HFF/Download.html">HFFDeepSpace</a></p>
-
-  <br></br>
-  <h5>Rotation Periods for a Sample of M-Dwarfs in PS1-MDS</h5>
-  <p>Here's a throwback: from my very first paper, a sample of rotating M-dwarfs in the PanSTARRS Medium-Deep Survey.</p>
-  <p>NASA ADS link for the associated paper: <a href="https://ui.adsabs.harvard.edu/abs/2016ApJ...833..281K/abstract">Kado-Fong et al. 2016</a></p>
-  <p>Associated Catalog: the VizieR Catalog Link can be <a href="https://ui.adsabs.harvard.edu/abs/2017yCat..18330281K/abstract">found here</a></p>
-</div>
-
-
-<div id="Research" class="tabcontent">
-  <h3>Research</h3>
-  <p>Here is <a href="./resources/kadofong_CV.pdf">my CV</a>, last updated 2023/03. While I work on a dedicated page for ongoing research, here's <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22kado-fong%2C%20e%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">my ADS record</a>.</p>
-  <p>If you prefer ORCIDs, mine is 0000-0002-0332-177X.</p>
-  <body>
-    <div class="container" style="margin-left:100px; margin-right:100px; margin-top:100px">
-      <div class="video">
-        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/tK9QYa2LKM4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-        <script>
-          // 2. This code loads the IFrame Player API code asynchronously.
-          var tag = document.createElement('script');
-
-          tag.src = "https://www.youtube.com/iframe_api";
-          var firstScriptTag = document.getElementsByTagName('script')[0];
-          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-          // 3. This function creates an <iframe> (and YouTube player)
-          //    after the API code downloads.
-          var player;
-          function onYouTubeIframeAPIReady() {
-            player = new YT.Player('player', {
-              height: '390',
-              width: '640',
-              videoId: 'M7lc1UVf-VE',
-              playerVars: {
-                'playsinline': 1
-              },
-              events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-              }
-            });
-          }
-
-          // 4. The API will call this function when the video player is ready.
-          function onPlayerReady(event) {
-            event.target.playVideo();
-          }
-
-          // 5. The API calls this function when the player's state changes.
-          //    The function indicates that when playing a video (state=1),
-          //    the player should play for six seconds and then stop.
-          var done = false;
-          function onPlayerStateChange(event) {
-            if (event.data == YT.PlayerState.PLAYING && !done) {
-              setTimeout(stopVideo, 6000);
-              done = true;
-            }
-          }
-          function stopVideo() {
-            player.stopVideo();
-          }
-        </script>
-      </div>
-      <div>
-        <p> You can find a video on my thesis work here; this is a research highlight done for the <a href="https://gradschool.princeton.edu/financial-support/fellowships/princeton-fellowships/honorific-fellowship-porter-ogden-jacobus">Porter Ogden Jacobus Honorific Fellowship</a> that supported my final year of graduate school.
-      </div>
-    </div>
-  </body>
-</div>
-
-<!-- tab function -->
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-
-document.getElementById("DefaultOpen").click();
-</script>
-
-
+            <section id="gallery" class="tab-content">
+                <h2>
+                    Out and About
+                </h2>   
+                <h1>
+                    Welcome!
+                </h1>  
+                <div class="container" style="margin-top:-50px">
+                    <div>
+                      <p>
+                        <b style="font-size:20pt; color:#c87d55">Galaxies are versatile, if immutable, laboratories.</b> They are simultaneously tracers of larger scale
+                        cosmological processes and the laboratories in which smaller scale astrophysics proceeds.
+                        Given that we are not able to create either universes nor stars in the lab, my work focuses on 
+                        how to best use the cosmic laboratories at our disposal to understand the physical processes that shape them.
+                      </p>
+                      <p>
+                        My main interest is in the low-mass galaxy regime, where I think about how 
+                        dwarf galaxies can inform our understanding of physics at both larger and smaller scales. 
+                        I have a particular interest in the relationship between the star formation cycle and 
+                        the dwarf population as a way to understand both the physics of star formation regulation and 
+                        as a driver of the diversity of the dwarf population.
+                      </p>
+                      <p>
+                        I am currently a YCAA prize fellow at the Yale Center for Astronomy and Astrophysics;
+                        I got my PhD from Princeton in 2022, and in 2025 I will become a Kavli fellow
+                        at the Kavli Institute for Particle Astrophysics and Cosmology at Stanford.
+                      </p>
+                  </div>   
+                <h1>
+                    Out and About
+                </h1>                                          
+                <div class="gallery-grid">
+                    <!-- Repeat this block for each thumbnail -->
+                    <div class="thumbnail" data-type="image" data-src="./resources/images/merian_at_dgscs.jpg">
+                        <img src="./resources/images/thumbnail_merian_at_dgscs.jpg" alt="Image 1">
+                        <div class="overlay">Merian at DGSCS2024</div>
+                    </div>
+                    <div class="thumbnail" data-type="video" data-src="https://www.youtube.com/embed/JzfS68aFVAY?si=Ea4XNKfCatgPL8Ca">
+                        <img src="./resources/images/gaspisa.jpg" alt="Video 1">
+                        <div class="overlay">Talk recording: GasPisa 2024</div>
+                    </div>                                         
+                    <div class="thumbnail" data-type="image" data-src="./resources/images/nedwarfs_groupphoto.jpg">
+                        <img src="./resources/images/nedwarfs_groupphoto.jpg" alt="Image 1">
+                        <div class="overlay">Group shot of Galactic Frontiers 2023</div>
+                    </div>
+                    <div class="thumbnail" data-type="image" data-src="./resources/images/nedwarfs_organizers.jpg">
+                        <img src="./resources/images/nedwarfs_organizers.jpg" alt="Image 1">
+                        <div class="overlay">SOC photo of Galactic Frontiers 2023</div>
+                    </div>                    
+                    <div class="thumbnail" data-type="video" data-src="https://www.youtube.com/embed/tK9QYa2LKM4">
+                        <img src="./resources/images/jacobus.jpg" alt="Video 1">
+                        <div class="overlay">Ceremony video: Jacobus Fellowship 2022</div>
+                    </div>                                                                                              
+                    <!-- Add more thumbnails as needed -->
+                </div>
+            </section>     
+            
+            <section id="papers" class="tab-content">
+                <h2>Publications</h2>
+                <h4 align="center">(site in progress, complete 2022/10-present)</h4>
+                <div class="sort-tabs" align="center">
+                    <button onclick="filterPapers('all','all','all')">All</button>
+                    <button onclick="filterPapers('2024','all','all')">2024</button>
+                    <button onclick="filterPapers('all','all','me')">First-author papers</button>
+                    <button onclick="filterPapers('all','all','student')">Student-led papers</button>
+                </div>
+                <div class="sort-tabs" align="center">
+                    <button onclick="filterPapers('all','regulation','all')">Star Formation Regulation</button>  
+                    <button onclick="filterPapers('all','structure','all')">Galaxy Structure & Assembly</button>                                        
+                    <button onclick="filterPapers('all','interaction','all')">Galaxy Interactions & Environment</button>  
+                    <button onclick="filterPapers('all','surveys','all')">Wide-field Surveys</button>                                        
+                    <!-- Add more sort tabs as needed -->
+                </div>                
+                <div class="papers-container">
+                    <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...966..129K/abstract" target="_blank" class="paper-link" data-year="2024" data-topics="regulation,surveys" data-firstauthor="me">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/ekf2024b.jpg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>SAGAbg. I. A Near-unity Mass-loading Factor in Low-mass Galaxies via Their Low-redshift Evolution in Stellar Mass, Oxygen Abundance, and Star Formation Rate </h3>
+                                <authors> <b>Kado-Fong</b>, Geha, Mao, de los Reyes, Wechsler, Asali, Kallivayalil, Nadler, Tollerud, & Weiner</authors>
+                                <p>
+                                    <em><b>Star formation drives moderate winds of change.</b></em> 
+                                    The efficiency at which star formation feedback drives galactic winds in dwarf galaxies underpins the physical processes of dwarf assembly and informs 
+                                    physical models of star formation regulation. We model both observational and physical effects to infer a moderate wind-driving efficiency 
+                                    that is consistent with modern ISM-scale simulations, but over an order of magnitude lower than what some cosmological simulations 
+                                    use to produce dwarf galaxies that are realistic in other aspects.
+                                    <!-- Less than 1% of the spectra taken for the Satellites Around Galactic Analogs (SAGA) Survey of MW-like satellite systems were of bona fide satellites, but -->                                    
+                                </p>
+                            </div>
+                        </div>
+                    </a>                
+                    <a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.530.4988L/abstract" target="_blank" class="paper-link" data-year="2024" data-topics="surveys" data-firstauthor="student">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/luo2024.jpg" alt="Paper 1">
+                            </div>                              
+                            <div class="paper-text">
+                                <h3> The Merian survey: design, construction, and characterization of a filter set optimized to find dwarf galaxies and measure their dark matter halo properties with weak lensing</h3>
+                                <authors>
+                                    Luo, Leauthaud, Greene, Huang, Song, <b>Kado-Fong</b>, Danieli, et al.
+                                </authors>
+                                <p>
+                                    <em><b>Filtering for dwarfs.</b></em>                                     
+                                    As the size of our imaging datasets increase, finding dwarf galaxies at scale is becoming an increasingly difficult proposition: 
+                                    standard photometric distance determinations are 
+                                    not sufficiently precise, and spectroscopic surveys are prohibitively resource-intensive. We designed and manufactured a set of two medium-band filters purpose-built to
+                                    find 100,000 dwarfs via their [OII] and H&alpha; line emission at 0.06&lt;z&lt;0.10 for the Merian Survey.
+                                </p>
+                            </div>                          
+                        </div>
+                    </a>
+                    <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240414498M/abstract" target="_blank" class="paper-link" data-year="2024" data-topics="interaction,surveys" data-firstauthor="na">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/mao2024.jpg" alt="Paper 1">
+                            </div>                              
+                            <div class="paper-text">
+                                <h3>
+                                    The SAGA Survey. III. A Census of 101 Satellite Systems around Milky Way-mass Galaxies 
+                                </h3>
+                                <authors>
+                                    Mao, Geha, Wechsler, Asali, Wang, <b>Kado-Fong</b>, et al.
+                                </authors>
+                                <p>
+                                    <em><b>Counting satellites around cosmic sisters.</b></em>                                     
+                                    We present the third data release of the Satellites Around Galactic Analog (SAGA) Survey, a spectroscopic
+                                    census of the satellite systems around 101 Milky Way-like hosts down to 10<sup>7</sup> solar masses.
+                                    The SAGA Survey places the Milky Way and its satellites in cosmological context by quantifying both
+                                    the average and variance of satellite properties across a statistical sample of MW-like hosts.
+                                </p>
+                            </div>                          
+                        </div>
+                    </a>                         
+                    <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240414499G/abstract" target="_blank" class="paper-link" data-year="2024" data-topics="interaction,surveys,regulation" data-firstauthor="na">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/geha2024.jpg" alt="Paper 1">
+                            </div>                              
+                            <div class="paper-text">
+                                <h3>
+                                    The SAGA Survey. IV. The Star Formation Properties of 101 Satellite Systems around Milky Way-mass Galaxies 
+                                </h3>
+                                <authors>
+                                    Geha, Mao, Wechsler, Asali, <b>Kado-Fong</b>, Kallivayalil, et al.
+                                </authors>
+                                <p>
+                                    <em><b>Massive frenemies halt star formation.</b></em>                                     
+                                    It is well-established that dwarf galaxies that are satellites of more massive galaxies are more likely to 
+                                    be non-star-forming, but the physical processes that lead to satellite quenching are poorly understood. We
+                                    catalog the star-forming properties of the satellite systems of 101 nearby Milky Way-like hosts in the SAGA survey 
+                                    to examine the imprint of host environment on the present and past star formation of low-mass galaxies.
+                                </p>
+                            </div>                          
+                        </div>
+                    </a>                     
+                    <a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240414500W/abstract" target="_blank" class="paper-link" data-year="2024" data-topics="interaction,structure,regulation" data-firstauthor="student">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/wang2024.jpg" alt="Paper 1">
+                            </div>                              
+                            <div class="paper-text">
+                                <h3>
+                                    The SAGA Survey. V. Modeling Satellite Systems around Milky Way-mass Galaxies with Updated UniverseMachine 
+                                </h3>
+                                <authors>
+                                    Wang, Nadler, Mao, Wechsler, Abel, Behroozi, et al. incl. <b>Kado-Fong</b>
+                                </authors>
+                                <p>
+                                    <em><b>Reframing our cosmic environment.</b></em>                                     
+                                    Massive galaxies exert a marked effect on the evolutionary trajectory of the dwarf galaxies that fall into their 
+                                    potentials. Here we extend the UniverseMachine semi-empirical model of
+                                    galaxy formation by
+                                    using a satellite census of 101 Milky Way-like hosts from the SAGA survey to constrain the relation between the 
+                                    cessation of star formation in dwarf galaxies and the presence of MW-like galaxy.
+                                </p>
+                            </div>                          
+                        </div>
+                    </a>  
+                    <a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...963...37K/abstract" target="_blank" class="paper-link" data-year="2024" data-topics="interaction,regulation" data-firstauthor="me">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/ekf2024a.jpg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Dwarf–Dwarf Interactions Can Both Trigger and Quench Star Formation 
+                                </h3>
+                                <authors> <b>Kado-Fong</b>, Robinson, Nyland, Greene, Suess, Stierwalt, & Beaton
+                                <p>
+                                    <em><b>Pulling a fast one in Little League.</b></em> 
+                                    Almost all dwarf galaxies with less than around 10<sup>9</sup> solar masses of stars are found to be 
+                                    star-forming when not interacting with a massive host galaxy. Interactions with another low-mass galaxy have been 
+                                    demonstrated to trigger periods of intense star formation; here we show that these dwarf-dwarf interactions 
+                                    can also temporarily <it>halt</it> star formation by displacing the gas needed for star formation via
+                                    gravitational encounters. 
+                                </p>
+                            </div>
+                        </div>
+                    </a>   
+                    <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...955....2L/abstract" target="_blank" class="paper-link" data-year="2023" data-topics="structure,interaction" data-firstauthor="student">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/li2023b.jpg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Beyond Ultra-diffuse Galaxies. II. Environmental Quenching of Mass-Size Outliers among the Satellites of Milky Way Analogs
+                                </h3>
+                                <authors> Li, Greene, Greco, Beaton, Danieli, et al. incl. <b>Kado-Fong</b>
+                                <p>
+                                    <em><b>Bigger but not better (or worse).</b></em> 
+                                    The future of a small galaxy is irreparably altered if it falls into the gravitational potential of a more massive host. Indeed, the
+                                    gravitational and hydrodynamical effects exerted by massive galaxies on their satellites contribute strongly to the observed
+                                    diversity in the structures of low-mass galaxies. However, here we show that the lowest density dwarfs are quenched at a rate 
+                                    similar to their denser analogs. This result runs contrary to the naive expectation in which the processes that allow for very low
+                                    stellar densities also lead low-density dwarfs to be more susceptible to environmental disruption.
+                                </p>
+                            </div>
+                        </div>
+                    </a>                     
+                    <a href="https://ui.adsabs.harvard.edu/abs/2023ApJ...955....1L/abstract" target="_blank" class="paper-link" data-year="2023" data-topics="structure,interaction" data-firstauthor="student">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/li2023a.jpg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Beyond Ultra-diffuse Galaxies. I. Mass-Size Outliers among the Satellites of Milky Way Analogs 
+                                </h3>
+                                <authors> Li, Greene, Greco, Huang, Melchior, et al. incl. <b>Kado-Fong</b>
+                                <p>
+                                    <em><b>When you say jump, I say "how high is high, really?"</b></em> 
+                                    Ultra-diffuse galaxies are called as such due to their large sizes and low surface brightnesses. Canonically, however, 
+                                    these galaxies have been defined with a flat cut in surface brightness and physical size. We argue that defining galaxies based on 
+                                    their deviation from the mass-size relation is a more physically-motivated way of describing 
+                                    these outliers in the galaxy population.
+                                </p>
+                            </div>
+                        </div>
+                    </a>   
+                    <a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.521.3861D/abstract" target="_blank" class="paper-link" data-year="2023" data-topics="structure,interaction" data-firstauthor="na">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/domingeuzsanchez2023.jpeg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Identification of tidal features in deep optical galaxy images with convolutional neural networks
+                                </h3>
+                                <authors>  Domínguez Sánchez, Martin, Damjanov, Buitrago, Huertas-Company, Bottrell, et al. incl. <b>Kado-Fong</b>
+                                <p>
+                                    <em><b>Train Against the Machine.</b></em> 
+                                    Stellar tidal features are formed from the remnants of satellite galaxies as they are ripped apart under the gravitational 
+                                    influence of a massive host galaxy. These structures provide insight into a galaxy's recent merger history, the 
+                                    stellar population of its satellite galaxies, and the gravitational potential of the host halo -- however, their diffuse and 
+                                    triaxial structure makes their identification a complex natural imaging problem. Here, we train a convolutional neural net 
+                                    using mock observations of hydrodynamical simulations; we find that the classifier performs significantly worse on 
+                                    real data, possibly due to insufficient realism in current cosmological simulations.
+                                </p>
+                            </div>
+                        </div>
+                    </a>                                                                         
+                    <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...941...11K/abstract" target="_blank" class="paper-link" data-year="2022" data-topics="structure,regulation" data-firstauthor="me">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/ekf2022c.jpg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Ultra-diffuse Galaxies as Extreme Star-forming Environments. I. Mapping Star Formation in H I-rich UDGs 
+                                </h3>
+                                <authors> <b>Kado-Fong</b>, Greene, Huang, & Goulding
+                                <p>
+                                    <em><b>Cloudy with a lowered chance of star formation.</b></em> 
+                                    Ultra-Diffuse Galaxies, or UDGs, are dwarf galaxies with remarkably low stellar densities; this diffuse
+                                    nature makes UDGs an extreme environment for star formation. Here, we map out the stellar mass and star formation 
+                                    rate surface densities of a sample of nearby gas-rich UDGs. We find that the UDGs are systematically less efficient
+                                    at forming stars given the size of their gas reservoirs, and that although these puffy galaxies are large for their 
+                                    stellar mass, their sizes are actually normal for their HI masses.
+                                </p>
+                            </div>
+                        </div>
+                    </a>    
+                    <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...939..101K/abstract" target="_blank" class="paper-link" data-year="2022" data-topics="structure,regulation" data-firstauthor="me">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/ekf2022b.jpeg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Ultra-diffuse Galaxies as Extreme Star-forming Environments. II. Star Formation and Pressure Balance in H I-rich UDGs
+                                </h3>
+                                <authors> <b>Kado-Fong</b>, Kim, Greene, & Lancaster
+                                <p>
+                                    <em><b>Cloudy with a lowered chance of star formation.</b></em> 
+                                    In the second paper of our series on UDG star formation, we investigate the implications of UDG structure and 
+                                    star formation efficiency on the strength of their star formation feedback. We find that descriptions of star formation 
+                                    that incorporate information about galaxy structure, rather than just gas availability, accurately account for low 
+                                    star formation efficiency in UDGs without the need to artificially change the strength of star formation feedback in these 
+                                    diffuse galaxies.
+                                </p>
+                            </div>
+                        </div>
+                    </a>    
+                    <a href="https://ui.adsabs.harvard.edu/abs/2022MNRAS.515.5335L/abstract" target="_blank" class="paper-link" data-year="2022" data-topics="structure" data-firstauthor="student">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/li2022.jpg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Reaching for the Edge I: probing the outskirts of massive galaxies with HSC, DECaLS, SDSS, and Dragonfly 
+                                </h3>
+                                <authors> Li, Huang, Leauthaud et al. incl. <b>Kado-Fong</b>
+                                <p>
+                                    <em><b>
+                                        Subtracting the haystack from the needle.
+                                    </b></em> 
+                                    The stellar outskirts of massive galaxies are thought to be dominated by stars deposited by accreted satellite 
+                                    galaxies; they thus encode substantial information about galaxies' unique assembly histories. Because these outskirts
+                                    are low density and therefore low surface-brightness, it is especially important to disentangle systematic effects of
+                                    data reduction and processing that may impact inferred outskirt properties. Here, we compare the limits of wide-field 
+                                    survey instruments and propose new methods to subtract the sky background in order to accurately delve into the stellar 
+                                    outskirts of massive galaxies.
+                                </p>
+                            </div>
+                        </div>
+                    </a>              
+                    <a href="https://ui.adsabs.harvard.edu/abs/2022AJ....164..142L/abstract" target="_blank" class="paper-link" data-year="2022" data-topics="structure" data-firstauthor="na">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/lancaster2022.jpeg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    Walter: A Tool for Predicting Resolved Stellar Population Observations with Applications to the Roman Space Telescope 
+                                </h3>
+                                <authors> Lancaster, Pearson, Williams et al. incl. <b>Kado-Fong</b>
+                                <p>
+                                    <em><b>
+                                        How to count a Sky Full of Stars.
+                                    </b></em> 
+                                    The incoming generation of space-based missions will greatly expand the distance at which we are able to 
+                                    resolve galaxy light into individual stars. These resolved star studies are able to leverage our knowledge of stellar physics
+                                    and evolution to infer galaxy distances, stellar population ages, and enrichment histories. Here we develop a new tool 
+                                    that predicts the necessary exposure time to reach specific branches of stellar evolution, as well as the potential 
+                                    crowding limit of a stellar population given its surface brightness and stellar population. 
+                                </p>
+                            </div>
+                        </div>
+                    </a>     
+                    <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...933..150G/abstract" target="_blank" class="paper-link" data-year="2022" data-topics="structure,surveys" data-firstauthor="na">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/greene2022.png" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    The Nature of Low-surface-brightness Galaxies in the Hyper Suprime-Cam Survey
+                                </h3>
+                                <authors> Greene, Greco, Goulding et al. incl. <b>Kado-Fong</b>
+                                <p>
+                                    <em><b>
+                                        Finding faint fuzzies.
+                                    </b></em> 
+                                    Characterizing the low surface-brightness tail of the galaxy population is crucial for quantifying 
+                                    the full diversity of the galaxy population. In this work, we use a cross-correlation approach to 
+                                    infer the redshift distribution of the low surface brightness galaxy catalog of Greco et al. 2018; we find that the  galaxies selected via 
+                                    low-surface brightness detection methods from HSC-SSP typically have stellar masses of around
+                                    10<sup>7</sup> solar masses and, unlike Ultra-Diffuse Galaxies,
+                                    lie on the mass-size relation at a distance of approximately 100 Mpc.
+                            </div>
+                        </div>
+                    </a>    
+                    <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...931..152K/abstract" target="_blank" class="paper-link" data-year="2022" data-topics="structure,regulation" data-firstauthor="me">
+                        <div class="paper-card">
+                            <div class="paper-image">                            
+                                <img src="resources/paper_figures/ekf2022a.jpeg" alt="Paper 1">
+                            </div>
+                            <div class="paper-text">
+                                <h3>
+                                    The In Situ Origins of Dwarf Stellar Outskirts in FIRE-2 
+                                </h3>
+                                <authors> <b>Kado-Fong</b>, Sanderson, Greene, et al.
+                                <p>
+                                    <em><b>
+                                        A Burst Too Far.
+                                    </b></em> 
+                                    Our previous work demonstrated that bright dwarfs generically host three-dimensionally round 
+                                    stellar outskirts; here, we consider whether the strong star formation feedback prescriptions
+                                    of the Feedback in Realistic Environments (FIRE-2) simulations are able to reproduce these structures.
+                                    We find that although the FIRE-2 galaxies do redistribute stars to large radii, many of the simulated 
+                                    dwarfs fail to form the thick disks that appear in the observed population. The simulated galaxies that 
+                                    do not form disks are also characterized by burstier star formation histories and lower cold gas fractions 
+                                    than the dwarfs that form disks, suggesting that the three-dimensional structure of galaxies is a 
+                                    key benchmark linked to star formation feedback and galaxy assembly.
+                            </div>
+                        </div>
+                    </a>                                                                                                                          
+                    <!-- Add more paper cards as needed -->
+                </div>
+            </section>            
+        </main>
+    </div>  
+    <footer>
+        Header image by <a href="https://unsplash.com/@desrecits?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color:inherit">Des Récits</a> on <a href="https://unsplash.com/photos/photo-of-mountain-with-trees-during-night-2O18Tz8QidM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color:inherit">Unsplash</a>          
+    </footer>      
+</body>
+</html>
