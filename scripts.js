@@ -14,7 +14,6 @@ function openTab(tabId) {
 }
 
 
-
 document.addEventListener("DOMContentLoaded", function() {
     // Show the first tab by default
     openTab("gallery");
