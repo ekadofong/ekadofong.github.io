@@ -72,6 +72,10 @@ h2 {
     text-align: center;
 }
 
+.tab-content {
+    margin-top: 5rem
+}
+
 .sidebar {
     color: #fff;
     width: 100%;
@@ -122,10 +126,7 @@ h2 {
 .container {
     position: relative; /* Changed from absolute to relative */
     width: 100%;
-    height: auto; /* Changed to auto to adjust based on content */
-    margin-top: 100px; /* Adjust this value based on the combined height of your header and sidebar */
-    padding: 2rem 0rem;
-    min-height: 1000px;
+    height: 100%; /* Changed to auto to adjust based on content */
     overflow: auto; /* Ensure that the container itself can scroll if needed */
 }
 
@@ -144,11 +145,6 @@ section {
 section.active {
     display: block; /* Show active section */
 }
-
-section h2 {
-    margin-top: 220px;
-}
-
 
 /* GALLERY */
 .gallery-grid {

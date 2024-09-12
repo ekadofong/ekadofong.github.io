@@ -4,19 +4,22 @@ function openTab(tabId) {
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";  
     }
+
+
     var activeTab = document.getElementById(tabId);
     activeTab.style.display = "block";
     
-    // Force layout reflow and ensure the container and document scroll to the top
-    setTimeout(function() {
-        window.scrollTo(0, 300); // Scroll to the top of the document
-    }, 0); // No delay
+    // Use a slight delay to ensure the layout updates before scrolling
+    setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, 50); // Adjust this delay if needed for better reliability
 }
 
 
 document.addEventListener("DOMContentLoaded", function() {
     // Show the first tab by default
     openTab("gallery");
+
 
     // Add event listeners for gallery thumbnails
     var thumbnails = document.querySelectorAll('.thumbnail');
@@ -58,15 +61,6 @@ function openMediaPlayer(type, src) {
     });
 }
 
-window.addEventListener('scroll', function() {
-    let scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-    let currentScroll = window.scrollY;
-
-    // Prevent scrolling above the sidebar's bottom
-    if (currentScroll < 300) { // 200 should be adjusted based on actual header and sidebar height
-        window.scrollTo(0, 300);
-    }
-});
 
 /* SORT PAPERS */
 function clearPapers() {
