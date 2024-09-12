@@ -12,6 +12,7 @@ body {
 header {    
     background-image: url('resources/decor/banner.jpg');
     background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat;
     background-position: center -10px; /* Center the background image */
     height: 10rem;
     text-align: center; 
