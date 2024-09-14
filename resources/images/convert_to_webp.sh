@@ -8,14 +8,14 @@ then
 fi
 
 # Convert all .jpg files to .webp format
-for file in *.svg; do
+for file in *.webp; do
     # Check if there are any .jpg files
     if [ -f "$file" ]; then
         # Extract the filename without extension
         filename="${file%.*}"
         # Convert the .jpg file to .webp
-        convert "$file" "$filename.webp"
-        echo "Converted: $file -> $filename.webp"
+        convert "$file" "$filename.png"
+        echo "Converted: $file -> $filename.png"
     fi
 done
 
